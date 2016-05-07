@@ -152,6 +152,7 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Laravolt\Avatar\ServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -210,7 +211,7 @@ return [
         'Html' => Collective\Html\HtmlFacade::class,
         'Flash' => Laracasts\Flash\Flash::class,
         'Image' => Intervention\Image\Facades\Image::class,
-        
+        'Avatar'    => Laravolt\Avatar\Facade::class,
 
     ],
 
