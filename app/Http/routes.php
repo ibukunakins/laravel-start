@@ -14,7 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/checkout', function () {
+    return view('payment');
+});
+Route::post('/pay', 'PaymentController@redirectToGateway')->name('pay');
+Route::get('/payment_complete', 'PaymentController@handleGatewayCallback');
 
 Route::auth();
-
 Route::get('/home', 'HomeController@index');
