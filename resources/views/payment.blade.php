@@ -18,15 +18,13 @@
             </p>
             <input type="hidden" name="email" value="authentic@gmail.com"> {{-- required payer email --}}
             <input type="hidden" name="orderID" value="345">
-            <input type="hidden" name="amount" value="295000"> {{-- required in kobo --}}
+            <input type="hidden" name="amount" value="295000"> {{-- Amount to pay required in kobo --}}
             <input type="hidden" name="quantity" value="3">
             <input type="hidden" name="reference" value="{{ Paystack::genTranxRef() }}"> {{-- required --}}
             <input type="hidden" name="key" value="{{ config('paystack.secretKey') }}"> {{-- required --}}
             {{ csrf_field() }} {{-- works only when using laravel 5.1, 5.2 --}}
 
              <input type="hidden" name="_token" value="{{ csrf_token() }}"> {{-- employ this in place of csrf_field only in laravel 5.0 --}}
-
-
             <p>
               <button class="btn btn-success btn-lg btn-block" type="submit" value="Pay Now!">
               <i class="fa fa-credit-card fa-lg"></i> Pay Now!

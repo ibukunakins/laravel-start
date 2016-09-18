@@ -154,6 +154,7 @@ return [
         Intervention\Image\ImageServiceProvider::class,
         Laravolt\Avatar\ServiceProvider::class,
         Unicodeveloper\Paystack\PaystackServiceProvider::class,
+        Stevebauman\Inventory\InventoryServiceProvider::class,
 
         /*
          * Application Service Providers...
